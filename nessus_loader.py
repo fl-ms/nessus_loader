@@ -11,7 +11,6 @@ import sqlite3
 import requests
 import json
 import io
-import sys
 from nessrest import ness6rest
 
 ## Functions
