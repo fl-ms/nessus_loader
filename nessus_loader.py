@@ -141,8 +141,7 @@ def print_main_menu(loaded):
     if loaded == True:
         print("[1] - Show existing folders and IDs")
         print("[2] - Change connection profile")
-        print("[3] - Show details for loaded connection")
-        
+        print("[3] - Show details for loaded connection")        
         print("[0] - Exit Nessusloader\n")
     else:
         print("[1] - Show and load existing connection profiles")
@@ -203,7 +202,7 @@ def print_delete_tables():
         else:
             profile_name = str(contents[int(menu)-1])
             try:
-                profile = profile_delete(profile_name)
+                profile_delete(profile_name)
                 print("Profile successfully deleted")
                 time.sleep(1)
                 return 
@@ -213,6 +212,7 @@ def print_delete_tables():
                 return 
 
 def print_details_connection(profile):
+    # Prints out the details of the current connected API (inkl. Keys)
     freeze = True
     while freeze == True:
         name = profile["name"]
